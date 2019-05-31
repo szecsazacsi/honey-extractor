@@ -1,0 +1,47 @@
+.Button{
+    font-size: 15;
+    background: rgba(255, 166, 0, 0.493);
+    color: black;
+    border-width: 2;
+    border-color: purple;
+    border-radius: 30%;
+    padding: 5 10;
+    margin: 5 15;
+}
+
+.Send{
+    font-size: 15;
+    background: rgba(255, 166, 0, 0.589);
+    color: black;
+    border-width: 2;
+    border-color: purple;
+    border-radius: 10%;
+    padding: 5 10;
+    margin: 5 100;
+}
+
+.Button:hover, .Button:active{
+    background: gray;
+}
+
+.Send:hover, .Send:active{
+    background: gray;
+}
+
+.Title{
+    text-align: center;
+    margin: 20 10 0 10;
+    color: black;
+    border-bottom: 1;
+    border-color: purple;
+}
+
+.Label{
+    text-align: left;
+    margin: 5 10;
+    color: black;
+}
+
+.Switch{
+    text-align: right;
+}

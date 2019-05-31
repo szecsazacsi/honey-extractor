@@ -1,0 +1,46 @@
+<StackLayout orientation="horizontal">
+    <Label class="Label" text="Bluetooth On/Off"></Label>
+    <Switch class="Switch" checked="false" (checkedChange)="Bluetooth()"></Switch>
+</StackLayout>
+
+<StackLayout>
+    <Slider [(ngModel)]="sliderOne" (tap)="onSliderChange()" value="30" minValue="30" maxValue="100" marginTop="2" width="300"></Slider>
+    <Slider [(ngModel)]="sliderTwo" (tap)="onSliderChange()" value="30" minValue="30" maxValue="100" marginTop="2" width="300"></Slider>
+    <Slider [(ngModel)]="sliderThree" (tap)="onSliderChange()" value="30" minValue="30" maxValue="100" marginTop="2" width="300"></Slider>
+    <Slider [(ngModel)]="sliderFour" (tap)="onSliderChange()" value="30" minValue="30" maxValue="100" marginTop="2" width="300"></Slider>
+</StackLayout>
+
+<GridLayout rows="auto, *" height="700px">
+        <Label class="Title" row="0" text="Chart of honey extractor's program"
+            textWrap="true"></Label>
+        <RadCartesianChart row="1">
+            <CategoricalAxis lineColor="#b0b0b0" lineThickness="1"
+                tkCartesianHorizontalAxis></CategoricalAxis>
+            <LinearAxis lineColor="#b0b0b0" lineThickness="1" maximum="100"
+                tkCartesianVerticalAxis></LinearAxis>
+            <AreaSeries tkCartesianSeries seriesName="Area"
+                categoryProperty="Category" [items]="areaSource"
+                stackMode="Stack" valueProperty="Amount"
+                selectionMode="Series"></AreaSeries>
+            <RadCartesianChartGrid tkCartesianGrid
+                horizontalLinesVisible="true" verticalLinesVisible="false"
+                verticalStripLinesVisible="false"
+                horizontalStripLinesVisible="false"
+                horizontalStrokeColor="#e5e5e5"></RadCartesianChartGrid>
+            <Palette tkCartesianPalette seriesName="Area">
+                <PaletteEntry tkCartesianPaletteEntry
+                    android:fillColor="#b2efe6" ios:fillColor="#7fe5faf6"
+                    strokeColor="#08caab" strokeWidth="2"></PaletteEntry>
+            </Palette>
+        </RadCartesianChart>
+</GridLayout>
+
+<StackLayout orientation="horizontal">
+    <Button class="Button" text="5 MIN" (tap)="buttonFivePressed()"></Button>
+    <Button class="Button" text="10 MIN" (tap)="buttonTenPressed()"></Button>
+    <Button class="Button" text="15 min" (tap)="buttonFifteenPressed()"></Button>
+</StackLayout>>
+
+<StackLayout>
+    <Button class="Send" text="SEND" (tap)="buttonSend()"></Button>
+</StackLayout>
